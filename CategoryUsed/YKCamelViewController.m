@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
     self.imageView.center  = self.view.center;
     [self.view addSubview:self.imageView];
     
