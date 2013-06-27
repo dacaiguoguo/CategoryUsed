@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5946AFF6177C10F50038EA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5946AFF5177C10F40038EA33 /* UIKit.framework */; };
+		5946AFF8177C10F50038EA33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5946AFF7177C10F50038EA33 /* Foundation.framework */; };
+		5946AFFA177C10F50038EA33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5946AFF9177C10F50038EA33 /* CoreGraphics.framework */; };
+		5946B000177C10F50038EA33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5946AFFE177C10F50038EA33 /* InfoPlist.strings */; };
+		5946B002177C10F50038EA33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946B001177C10F50038EA33 /* main.m */; };
+		5946B006177C10F50038EA33 /* YKCamelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946B005177C10F50038EA33 /* YKCamelAppDelegate.m */; };
+		5946B008177C10F50038EA33 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5946B007177C10F50038EA33 /* Default.png */; };
+		5946B00A177C10F50038EA33 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5946B009177C10F50038EA33 /* Default@2x.png */; };
+		5946B00C177C10F50038EA33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5946B00B177C10F50038EA33 /* Default-568h@2x.png */; };
+		5946B00F177C10F50038EA33 /* YKCamelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946B00E177C10F50038EA33 /* YKCamelViewController.m */; };
+		5946B012177C10F50038EA33 /* YKCamelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5946B010177C10F50038EA33 /* YKCamelViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5946AFF2177C10F40038EA33 /* CategoryUsed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CategoryUsed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5946AFF5177C10F40038EA33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5946AFF7177C10F50038EA33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5946AFF9177C10F50038EA33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5946AFFD177C10F50038EA33 /* CategoryUsed-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CategoryUsed-Info.plist"; sourceTree = "<group>"; };
+		5946AFFF177C10F50038EA33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5946B001177C10F50038EA33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5946B003177C10F50038EA33 /* CategoryUsed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CategoryUsed-Prefix.pch"; sourceTree = "<group>"; };
+		5946B004177C10F50038EA33 /* YKCamelAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCamelAppDelegate.h; sourceTree = "<group>"; };
+		5946B005177C10F50038EA33 /* YKCamelAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKCamelAppDelegate.m; sourceTree = "<group>"; };
+		5946B007177C10F50038EA33 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5946B009177C10F50038EA33 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5946B00B177C10F50038EA33 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5946B00D177C10F50038EA33 /* YKCamelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCamelViewController.h; sourceTree = "<group>"; };
+		5946B00E177C10F50038EA33 /* YKCamelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKCamelViewController.m; sourceTree = "<group>"; };
+		5946B011177C10F50038EA33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YKCamelViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5946AFEF177C10F40038EA33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5946AFF6177C10F50038EA33 /* UIKit.framework in Frameworks */,
+				5946AFF8177C10F50038EA33 /* Foundation.framework in Frameworks */,
+				5946AFFA177C10F50038EA33 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5946AFE9177C10F40038EA33 = {
+			isa = PBXGroup;
+			children = (
+				5946AFFB177C10F50038EA33 /* CategoryUsed */,
+				5946AFF4177C10F40038EA33 /* Frameworks */,
+				5946AFF3177C10F40038EA33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5946AFF3177C10F40038EA33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5946AFF2177C10F40038EA33 /* CategoryUsed.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5946AFF4177C10F40038EA33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5946AFF5177C10F40038EA33 /* UIKit.framework */,
+				5946AFF7177C10F50038EA33 /* Foundation.framework */,
+				5946AFF9177C10F50038EA33 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5946AFFB177C10F50038EA33 /* CategoryUsed */ = {
+			isa = PBXGroup;
+			children = (
+				5946B004177C10F50038EA33 /* YKCamelAppDelegate.h */,
+				5946B005177C10F50038EA33 /* YKCamelAppDelegate.m */,
+				5946B00D177C10F50038EA33 /* YKCamelViewController.h */,
+				5946B00E177C10F50038EA33 /* YKCamelViewController.m */,
+				5946B010177C10F50038EA33 /* YKCamelViewController.xib */,
+				5946AFFC177C10F50038EA33 /* Supporting Files */,
+			);
+			path = CategoryUsed;
+			sourceTree = "<group>";
+		};
+		5946AFFC177C10F50038EA33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5946AFFD177C10F50038EA33 /* CategoryUsed-Info.plist */,
+				5946AFFE177C10F50038EA33 /* InfoPlist.strings */,
+				5946B001177C10F50038EA33 /* main.m */,
+				5946B003177C10F50038EA33 /* CategoryUsed-Prefix.pch */,
+				5946B007177C10F50038EA33 /* Default.png */,
+				5946B009177C10F50038EA33 /* Default@2x.png */,
+				5946B00B177C10F50038EA33 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5946AFF1177C10F40038EA33 /* CategoryUsed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5946B015177C10F50038EA33 /* Build configuration list for PBXNativeTarget "CategoryUsed" */;
+			buildPhases = (
+				5946AFEE177C10F40038EA33 /* Sources */,
+				5946AFEF177C10F40038EA33 /* Frameworks */,
+				5946AFF0177C10F40038EA33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CategoryUsed;
+			productName = CategoryUsed;
+			productReference = 5946AFF2177C10F40038EA33 /* CategoryUsed.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5946AFEA177C10F40038EA33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YKCamel;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = YEK;
+			};
+			buildConfigurationList = 5946AFED177C10F40038EA33 /* Build configuration list for PBXProject "CategoryUsed" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5946AFE9177C10F40038EA33;
+			productRefGroup = 5946AFF3177C10F40038EA33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5946AFF1177C10F40038EA33 /* CategoryUsed */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5946AFF0177C10F40038EA33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5946B000177C10F50038EA33 /* InfoPlist.strings in Resources */,
+				5946B008177C10F50038EA33 /* Default.png in Resources */,
+				5946B00A177C10F50038EA33 /* Default@2x.png in Resources */,
+				5946B00C177C10F50038EA33 /* Default-568h@2x.png in Resources */,
+				5946B012177C10F50038EA33 /* YKCamelViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5946AFEE177C10F40038EA33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5946B002177C10F50038EA33 /* main.m in Sources */,
+				5946B006177C10F50038EA33 /* YKCamelAppDelegate.m in Sources */,
+				5946B00F177C10F50038EA33 /* YKCamelViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5946AFFE177C10F50038EA33 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5946AFFF177C10F50038EA33 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5946B010177C10F50038EA33 /* YKCamelViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5946B011177C10F50038EA33 /* en */,
+			);
+			name = YKCamelViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5946B013177C10F50038EA33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5946B014177C10F50038EA33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5946B016177C10F50038EA33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CategoryUsed/CategoryUsed-Prefix.pch";
+				INFOPLIST_FILE = "CategoryUsed/CategoryUsed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5946B017177C10F50038EA33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CategoryUsed/CategoryUsed-Prefix.pch";
+				INFOPLIST_FILE = "CategoryUsed/CategoryUsed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5946AFED177C10F40038EA33 /* Build configuration list for PBXProject "CategoryUsed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5946B013177C10F50038EA33 /* Debug */,
+				5946B014177C10F50038EA33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5946B015177C10F50038EA33 /* Build configuration list for PBXNativeTarget "CategoryUsed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5946B016177C10F50038EA33 /* Debug */,
+				5946B017177C10F50038EA33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5946AFEA177C10F40038EA33 /* Project object */;
+}
