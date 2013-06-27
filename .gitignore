@@ -21,5 +21,5 @@ include
 docs
 
 #pods
-Podfile.lock
-Pods
+#Podfile.lock
+#Pods
