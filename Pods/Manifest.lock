@@ -15,6 +15,9 @@ PODS:
   - MKNetworkKit (0.87):
     - Reachability (~> 3.1.0)
   - Reachability (3.1.0)
+  - SDWebImage (2.7.4):
+    - SDWebImage/Main
+  - SDWebImage/Main (2.7.4)
 
 DEPENDENCIES:
   - FoundationExtension (~> 0.35.2)
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - KLSwitch (from `https://github.com/KieranLafferty/KLSwitch`)
   - MKNetworkKit (~> 0.85)
   - Reachability (~> 3.1.0)
+  - SDWebImage (~> 2.4)
 
 EXTERNAL SOURCES:
   KLSwitch:
@@ -34,5 +38,6 @@ SPEC CHECKSUMS:
   KLSwitch: c54c6dca5282154971d90a80422a10f0f49ed48b
   MKNetworkKit: f174100f92473012138b6b1c3040266af8d43a14
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  SDWebImage: 06f076026fe7867ab0100fce95d943f7bff981eb
 
 COCOAPODS: 0.20.2

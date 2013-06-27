@@ -49,6 +49,18 @@
 #define COCOAPODS_VERSION_MINOR_Reachability 1
 #define COCOAPODS_VERSION_PATCH_Reachability 0
 
+// SDWebImage
+#define COCOAPODS_POD_AVAILABLE_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_SDWebImage 2
+#define COCOAPODS_VERSION_MINOR_SDWebImage 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage 4
+
+// SDWebImage/Main
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_Main
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_Main 2
+#define COCOAPODS_VERSION_MINOR_SDWebImage_Main 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Main 4
+
 // cdebug
 #define COCOAPODS_POD_AVAILABLE_cdebug
 #define COCOAPODS_VERSION_MAJOR_cdebug 0

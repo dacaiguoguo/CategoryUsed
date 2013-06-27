@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59181C01177C5886004540E7 /* imageArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59181C00177C5886004540E7 /* imageArray.plist */; };
 		5946AFF6177C10F50038EA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5946AFF5177C10F40038EA33 /* UIKit.framework */; };
 		5946AFF8177C10F50038EA33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5946AFF7177C10F50038EA33 /* Foundation.framework */; };
 		5946AFFA177C10F50038EA33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5946AFF9177C10F50038EA33 /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2D1015345365431F88F7BB1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0B358E454D475CADFD9821 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		59181C00177C5886004540E7 /* imageArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageArray.plist; sourceTree = "<group>"; };
 		5946AFF2177C10F40038EA33 /* CategoryUsed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CategoryUsed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5946AFF5177C10F40038EA33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5946AFF7177C10F50038EA33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +96,7 @@
 				5946B00D177C10F50038EA33 /* YKCamelViewController.h */,
 				5946B00E177C10F50038EA33 /* YKCamelViewController.m */,
 				5946B010177C10F50038EA33 /* YKCamelViewController.xib */,
+				59181C00177C5886004540E7 /* imageArray.plist */,
 				5946AFFC177C10F50038EA33 /* Supporting Files */,
 			);
 			path = CategoryUsed;
@@ -172,6 +175,7 @@
 				5946B00A177C10F50038EA33 /* Default@2x.png in Resources */,
 				5946B00C177C10F50038EA33 /* Default-568h@2x.png in Resources */,
 				5946B012177C10F50038EA33 /* YKCamelViewController.xib in Resources */,
+				59181C01177C5886004540E7 /* imageArray.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
