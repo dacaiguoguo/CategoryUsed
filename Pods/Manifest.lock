@@ -29,14 +29,17 @@ PODS:
     - SDWebImage/MapKit
   - SDWebImage/MapKit (3.3):
     - libwebp
+  - UIActivityIndicator-for-SDWebImage (1.0.0):
+    - SDWebImage (~> 3.2)
 
 DEPENDENCIES:
   - FoundationExtension (~> 0.35.2)
-  - JSONKit
+  - JSONKit (~> 1.4)
   - KLSwitch (from `https://github.com/KieranLafferty/KLSwitch`)
   - MKNetworkKit (~> 0.85)
   - Reachability (~> 3.1.0)
   - SDWebImage (~> 3.3)
+  - UIActivityIndicator-for-SDWebImage
 
 EXTERNAL SOURCES:
   KLSwitch:
@@ -51,5 +54,6 @@ SPEC CHECKSUMS:
   MKNetworkKit: f174100f92473012138b6b1c3040266af8d43a14
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
   SDWebImage: 79a8bac9ccf85b269100b294f7b43684dab8bf8a
+  UIActivityIndicator-for-SDWebImage: c5e8f6208e302b94bc50505dd24c78f34af8a749
 
 COCOAPODS: 0.20.2

@@ -61,6 +61,12 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_MapKit 3
 #define COCOAPODS_VERSION_PATCH_SDWebImage_MapKit 0
 
+// UIActivityIndicator-for-SDWebImage
+#define COCOAPODS_POD_AVAILABLE_UIActivityIndicator_for_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_UIActivityIndicator_for_SDWebImage 1
+#define COCOAPODS_VERSION_MINOR_UIActivityIndicator_for_SDWebImage 0
+#define COCOAPODS_VERSION_PATCH_UIActivityIndicator_for_SDWebImage 0
+
 // cdebug
 #define COCOAPODS_POD_AVAILABLE_cdebug
 #define COCOAPODS_VERSION_MAJOR_cdebug 0

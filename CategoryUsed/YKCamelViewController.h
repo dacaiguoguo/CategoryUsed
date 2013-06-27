@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YKCamelViewController : UIViewController
+- (IBAction)loadImage:(id)sender;
 
 @end
