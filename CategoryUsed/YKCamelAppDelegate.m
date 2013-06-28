@@ -74,9 +74,9 @@
         self.userToken=nil;
     }];
 
-    self.camelNetworkEngine = [[YKCamelHomeNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
-    [self.camelNetworkEngine useCache];
-    [self.camelNetworkEngine setReachabilityChangedHandler:^(NetworkStatus a) {
+    self.camelHomeNetworkEngine = [[YKCamelHomeNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
+    [self.camelHomeNetworkEngine useCache];
+    [self.camelHomeNetworkEngine setReachabilityChangedHandler:^(NetworkStatus a) {
         
     }];
 

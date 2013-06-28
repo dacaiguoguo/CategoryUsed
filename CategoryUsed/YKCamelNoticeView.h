@@ -29,6 +29,7 @@
 #define YK_TITLE_TEXT_FONT [UIFont boldSystemFontOfSize:16]
 
 @class YKCamelNoticeView;
+@class YKCamelNoticeView2;
 @protocol YKCamelNoticeViewDelegate <NSObject>
 
 - (void)noticeView:(YKCamelNoticeView *)noticeV didSelectRow:(int)row;
@@ -39,13 +40,31 @@
 @protocol YKCamelNoticeViewDataSource <NSObject>
 
 - (NSString *)titleForRow:(int)_r;
+//一个view里有多个的时候要实现下面的方法，以便区分是哪个noticeView
+@optional
+- (NSString *)noticeView:(YKCamelNoticeView *)noticeView titleForRow:(int)_r;
 
 @end
 
-@interface YKCamelNoticeView : UIView<UITableViewDelegate,UITableViewDataSource>{
-    int count;
-    BOOL toEnd;
-}
+
+@protocol YKCamelNoticeViewDelegate2 <NSObject>
+
+- (void)noticeView:(YKCamelNoticeView2*)noticeV didSelectRow:(int)row;
+- (void)noticeView:(YKCamelNoticeView2 *)noticeV closeAction:(UIButton*)sender;
+
+@end
+
+@protocol YKCamelNoticeViewDataSource2 <NSObject>
+
+- (NSString *)titleForRow:(int)_r;
+//一个view里有多个的时候要实现下面的方法，以便区分是哪个noticeView
+@optional
+- (NSString *)noticeView:(YKCamelNoticeView2 *)noticeView titleForRow:(int)_r;
+
+@end
+
+
+@interface YKCamelNoticeView : UIView<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, retain) UITableView *interTableView;
 @property (nonatomic, retain) UIButton *accessoryButton;
 @property (nonatomic, retain) NSTimer *moveTimer;
@@ -56,3 +75,17 @@
 - (void)startUp;
 - (void)stopUp;
 @end
+
+
+@interface YKCamelNoticeView2 : UIView <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, retain) UITableView *interTableView;
+@property (nonatomic, retain) UIButton *accessoryButton;
+@property (nonatomic, retain) NSTimer *moveTimer;
+@property (nonatomic, assign) IBOutlet id<YKCamelNoticeViewDelegate2> delegate;
+@property (nonatomic, retain) NSArray *titlesArray;
+- (void)reloadData;
+- (void)startUp;
+- (void)stopUp;
+@end
+

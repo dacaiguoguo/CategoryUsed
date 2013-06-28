@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UITableViewCell *bannerCell;
 @property (strong, nonatomic) IBOutlet UITableViewCell *htmlCell;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
-@property (strong, nonatomic) IBOutlet YKCamelNoticeView *noticeView;
+@property (strong, nonatomic) IBOutlet YKCamelNoticeView2 *noticeView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIPageControl *topicPageControl;
 @property (strong, nonatomic) YKHome* home;
@@ -100,9 +100,19 @@
     return [documentsDirectory stringByAppendingPathComponent:@"homeHtml.dat"];
 }
 
+-(void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+//    首页不应该cancel
+//    if(self.homeOperation) {
+//        
+//        [self.homeOperation cancel];
+//        self.homeOperation = nil;
+//    }
+}
+
 - (void)requestData{
     
-    [ApplicationDelegate.camelNetworkEngine completionHandler:^(YKHome *home) {
+    self.homeOperation = [ApplicationDelegate.camelHomeNetworkEngine completionHandler:^(YKHome *home) {
         self.home = home;
         [self.webView loadHTMLString:home.htmlUrl baseURL:nil];
         
@@ -110,7 +120,7 @@
 
             
 //TEST
-            {
+           if(1) {
                 YKNotice *notice = [YKNotice new];
                 notice.title = @"2222";
                 notice.noticeId = @"223";
@@ -121,7 +131,6 @@
                 notice2.noticeId = @"33223";
                 notice2.actionUrl = @"afsdf";
                 [self.home.noticeList addObject:notice2];
-//                [self.home.noticeList addObject:[self.home.noticeList objectAtIndex:0]];
 
             }
             
@@ -300,9 +309,6 @@
 
 //        NSString* heightString=[aWebView stringByEvaluatingJavaScriptFromString:@"document.body.scrollHeight"];
         int h=MAX([heightString intValue], self.tableView.frame.size.height-170);
-#ifdef DEBUG
-        NSLog(@"document.body.scrollHeight-----%@,Real:%d;\n%@\n%@",heightString,h,self.tableView,self.view);
-#endif
 
         webcellHeight=h;
 
@@ -311,7 +317,7 @@
 }
 
 #pragma mark notice
-- (void)noticeView:(YKCamelNoticeView *)noticeV didSelectRow:(int)row{
+- (void)noticeView:(YKCamelNoticeView2 *)noticeV didSelectRow:(int)row{
 //  NSString *currentTitle =   [self titleForRow:row];
 //    //    NSURL *url = [NSURL URLWithString:@"http://b2c.test.yekmob.com/api/index.php/noticeInfo/html5?id=1&title="];
 //    
@@ -324,7 +330,7 @@
 #endif
 
 }
-- (void)noticeView:(YKCamelNoticeView *)noticeV closeAction:(UIButton*)sender{
+- (void)noticeView:(YKCamelNoticeView2 *)noticeV closeAction:(UIButton*)sender{
     [self hideNotice];
 }
 
@@ -352,7 +358,12 @@
     CGRect tableFrame=CGRectMake(0, self.noticeView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-self.noticeView.frame.size.height);
     self.tableView.frame=tableFrame;
     
-    self.noticeView.totalRow = self.home.noticeList.count;
+    NSMutableArray *tits = [NSMutableArray new];
+    for (int i=0; i<self.home.noticeList.count; i++) {
+        YKNotice *tesmtp = self.home.noticeList[i];
+        [tits addObject:tesmtp.title];
+    }
+    self.noticeView.titlesArray = tits;
     [self.noticeView reloadData];
     if (self.home.noticeList.count==1) {
         

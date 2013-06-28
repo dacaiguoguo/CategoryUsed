@@ -24,7 +24,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) YKCamelHomeViewController *viewController;
-@property (strong, nonatomic) YKCamelHomeNetworkEngine *camelNetworkEngine;
+@property (strong, nonatomic) YKCamelHomeNetworkEngine *camelHomeNetworkEngine;
 @property (strong, nonatomic) NSString *userToken;
 
 
