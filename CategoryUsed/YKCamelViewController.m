@@ -7,12 +7,18 @@
 //
 
 #import "YKCamelViewController.h"
+#import "YKCamelAppDelegate.h"
+
+
 #import "JSONKit.h"
 #import "UIImageView+WebCache.h"
 #import "UIImageView+UIActivityIndicatorForSDWebImage.h"
-#import "MKNetworkKit.h"
+#import "YKCamelNetworkEngine.h"
+
 @interface YKCamelViewController ()
 @property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) MKNetworkEngine *engine;
+
 @end
 
 @implementation YKCamelViewController
@@ -26,6 +32,8 @@
     
     NSMutableDictionary *dic =[NSMutableDictionary dictionaryWithDictionary: @{@"abc": @"www",@"cdd":@"rrr"}];
     DLog(@"%@",[dic JSONString]);
+
+
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -45,5 +53,14 @@
 
     [self.imageView setImageWithURL:array[4] placeholderImage:nil usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 
+    
+    [ApplicationDelegate.camelNetworkEngine completionHandler:^(YKHome *home) {
+        NSLog(@"DACAIGUOGUO:%@",home);
+    } errorHandler:^(NSError *error) {
+        
+    }];
+    
+    
+    
 }
 @end

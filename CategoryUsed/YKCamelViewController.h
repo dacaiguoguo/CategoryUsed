@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class MKNetworkOperation;
+
 @interface YKCamelViewController : UIViewController
+@property (nonatomic, retain) MKNetworkOperation *homeOperation;
+
+
 - (IBAction)loadImage:(id)sender;
 
 @end
