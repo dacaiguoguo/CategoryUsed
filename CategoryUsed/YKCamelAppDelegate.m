@@ -8,12 +8,13 @@
 
 #import "YKCamelAppDelegate.h"
 
-#import "YKCamelViewController.h"
+#import "YKCamelHomeViewController.h"
 
-#import "YKCamelNetworkEngine.h"
+#import "YKCamelHomeNetworkEngine.h"
 
 #import "UIDevice.h"
 
+#import "YKBaseModel.h"
 
 @implementation YKCamelAppDelegate
 
@@ -73,7 +74,11 @@
         self.userToken=nil;
     }];
 
-    self.camelNetworkEngine = [[YKCamelNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
+    self.camelNetworkEngine = [[YKCamelHomeNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
+    [self.camelNetworkEngine useCache];
+    [self.camelNetworkEngine setReachabilityChangedHandler:^(NetworkStatus a) {
+        
+    }];
 
 }
 
@@ -82,11 +87,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[YKCamelViewController alloc] initWithNibName:@"YKCamelViewController" bundle:nil];
+    
+    [self setUpEngines];
+
+    self.viewController = [[YKCamelHomeViewController alloc] initWithNibName:@"YKCamelHomeViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    [self setUpEngines];
     return YES;
 }
 

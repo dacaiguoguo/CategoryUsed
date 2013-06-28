@@ -68,6 +68,8 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface YKEntity : NSObject
 -(void) setAttributeValue:(NSString*) v forKey:(NSString*) akey;
 -(NSString*) attributeValueForKey:(NSString*) akey;
