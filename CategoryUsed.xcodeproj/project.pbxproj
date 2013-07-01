@@ -24,6 +24,9 @@
 		5946B00A177C10F50038EA33 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5946B009177C10F50038EA33 /* Default@2x.png */; };
 		5946B00C177C10F50038EA33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5946B00B177C10F50038EA33 /* Default-568h@2x.png */; };
 		5946B00F177C10F50038EA33 /* YKCamelHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */; };
+		594E708E178117DE00DFB972 /* YKCamelBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */; };
+		594E708F178117DE00DFB972 /* YKCamelBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */; };
+		59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */; };
 		59F722C6177D59E100C74300 /* YKCamelNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F722C5177D59E100C74300 /* YKCamelNoticeView.m */; };
 		59F7241E177D5E6F00C74300 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F722CB177D5E6E00C74300 /* Icon-72.png */; };
 		59F7241F177D5E6F00C74300 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F722CC177D5E6E00C74300 /* Icon-Small-50.png */; };
@@ -355,6 +358,11 @@
 		5946B00B177C10F50038EA33 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5946B00D177C10F50038EA33 /* YKCamelHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKCamelHomeViewController.h; sourceTree = "<group>"; };
 		5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKCamelHomeViewController.m; sourceTree = "<group>"; };
+		594E708B178117DE00DFB972 /* YKCamelBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelBaseViewController.h; sourceTree = "<group>"; };
+		594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelBaseViewController.m; sourceTree = "<group>"; };
+		594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelBaseViewController.xib; sourceTree = "<group>"; };
+		59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNavigationController.h; sourceTree = "<group>"; };
+		59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelNavigationController.m; sourceTree = "<group>"; };
 		59F722C4177D59E100C74300 /* YKCamelNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNoticeView.h; sourceTree = "<group>"; };
 		59F722C5177D59E100C74300 /* YKCamelNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelNoticeView.m; sourceTree = "<group>"; };
 		59F722CB177D5E6E00C74300 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -728,6 +736,11 @@
 			children = (
 				5946B004177C10F50038EA33 /* YKCamelAppDelegate.h */,
 				5946B005177C10F50038EA33 /* YKCamelAppDelegate.m */,
+				59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */,
+				59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */,
+				594E708B178117DE00DFB972 /* YKCamelBaseViewController.h */,
+				594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */,
+				594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */,
 				5946B00D177C10F50038EA33 /* YKCamelHomeViewController.h */,
 				5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */,
 				59181C02177C6E82004540E7 /* YKCamelHomeViewController.xib */,
@@ -1730,6 +1743,7 @@
 				59F72544177D5E6F00C74300 /* yindao_3@2x.jpg in Resources */,
 				59F72545177D5E6F00C74300 /* yindao_4@2x.jpg in Resources */,
 				59F72546177D5E6F00C74300 /* iTunesArtwork in Resources */,
+				594E708F178117DE00DFB972 /* YKCamelBaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1780,6 +1794,8 @@
 				59181C15177D2C11004540E7 /* YKGDSFacade.m in Sources */,
 				59181C1C177D56BF004540E7 /* YKLoopScrollView.m in Sources */,
 				59F722C6177D59E100C74300 /* YKCamelNoticeView.m in Sources */,
+				59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */,
+				594E708E178117DE00DFB972 /* YKCamelBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

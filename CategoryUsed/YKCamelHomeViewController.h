@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "YKLoopScrollView.h"
+#import "YKCamelBaseViewController.h"
 
 /*!
  
@@ -26,7 +27,7 @@
  */
 
 @class MKNetworkOperation;
-@interface YKCamelHomeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIWebViewDelegate, YKLoopScrollViewDelegate>
+@interface YKCamelHomeViewController : YKCamelBaseViewController<UITableViewDataSource,UITableViewDelegate,UIWebViewDelegate, YKLoopScrollViewDelegate>
 @property(nonatomic, retain) MKNetworkOperation* homeOperation;
 
 - (void)BIOperationWith:(NSString *)classname;

@@ -8,10 +8,7 @@
 
 #import "YKCamelHomeViewController.h"
 #import"YKCamelNoticeView.h"
-#import "YKBaseModel.h"
-#import "UIImageView+WebCache.h"
-#import "YKCamelHomeNetworkEngine.h"
-#import "YKCamelAppDelegate.h"
+
 
 //test by dacaiguoguo 
 
@@ -57,6 +54,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"首页";
+        self.tabBarItem.image = [UIImage imageNamed:[self navTabNormalImageNames][0]];
         
         {//navbar 左侧的logo
             UIView* v=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 46)];
@@ -65,6 +64,7 @@
             [v addSubview:iv];
             UIBarButtonItem* btnitem=[[UIBarButtonItem alloc] initWithCustomView:v];
             self.navigationItem.leftBarButtonItem=btnitem;
+            self.navigationItem.title = nil;
         }
         self.navigationItem.rightBarButtonItem=[self createNavRightItemButtonWithNormalImageName:@"common_btn_sousuo_normal.png" selectedImageName:@"common_btn_sousuo_selected.png" target:self action:@selector(onSearchButtonTap:)];
     }
@@ -89,16 +89,7 @@
         return item;
     }
 }
-- (NSString *)imagesFilePath{
-    NSArray *psths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [psths objectAtIndex:0];
-    return [documentsDirectory stringByAppendingPathComponent:@"homeimage.plist"];
-}
-- (NSString *)dateFilePath{
-    NSArray *psths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [psths objectAtIndex:0];
-    return [documentsDirectory stringByAppendingPathComponent:@"homeHtml.dat"];
-}
+
 
 -(void) viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
@@ -318,16 +309,13 @@
 
 #pragma mark notice
 - (void)noticeView:(YKCamelNoticeView2 *)noticeV didSelectRow:(int)row{
-//  NSString *currentTitle =   [self titleForRow:row];
-//    //    NSURL *url = [NSURL URLWithString:@"http://b2c.test.yekmob.com/api/index.php/noticeInfo/html5?id=1&title="];
-//    
-//    NSString *toUrl =[NSString stringWithFormat:@"http://b2c.test.yekmob.com/api/index.php/noticeInfo/html5?id=1&title=%@",[currentTitle stringUrlEncode]];
-    
     NSString *title =  ((YKNotice *)[self.home.noticeList objectAtIndex:row]).actionUrl;
     NSURL *url = [NSURL URLWithString:title];
 #ifdef DEBUG
  NSLog(@"tourl:%@",url);
 #endif
+    
+    
 
 }
 - (void)noticeView:(YKCamelNoticeView2 *)noticeV closeAction:(UIButton*)sender{
@@ -428,6 +416,8 @@
         return;
     }
     assert(t.actionUrl!=nil);
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"onTopicButtonTap" object:t.actionUrl];
 }
 
 @end

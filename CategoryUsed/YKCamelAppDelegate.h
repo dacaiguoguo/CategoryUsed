@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YKCamelNavigationController.h"
+
 #define ApplicationDelegate ((YKCamelAppDelegate *)[UIApplication sharedApplication].delegate)
 #pragma mark 通知
 /*! 登陆／注册成功会发送此事件 notify.userinfo["user"] 是 YKUser */
@@ -22,6 +24,8 @@
 @interface YKCamelAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) YKCamelNavigationController *iNav;
+@property (strong, nonatomic) UITabBarController *iTab;
 
 @property (strong, nonatomic) YKCamelHomeViewController *viewController;
 @property (strong, nonatomic) YKCamelHomeNetworkEngine *camelHomeNetworkEngine;
