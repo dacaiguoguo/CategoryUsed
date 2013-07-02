@@ -29,3 +29,33 @@ typedef void (^BrandResponseBlock)(YKBrandList *brandli);
                            errorHandler:(MKNKErrorBlock) errorBlock;
 
 @end
+
+
+typedef void (^HotSearchResponseBlock)(YKKeywordList *keywordli);
+
+
+@interface YKCamelHotSearchNetworkEngine : MKNetworkEngine
+
+-(MKNetworkOperation*)completionHandler:(HotSearchResponseBlock) completionBlock
+                           errorHandler:(MKNKErrorBlock) errorBlock;
+
+@end
+
+
+typedef void (^ProductListResponseBlock)(YKProductList *keywordli);
+
+
+@interface YKCamelProductListNetworkEngine : MKNetworkEngine
+
+-(MKNetworkOperation*)searchKeyword:(NSString *)kw completionHandler:(ProductListResponseBlock) completionBlock
+                 errorHandler:(MKNKErrorBlock) errorBlock;
+
+@end
+
+
+
+
+
+
+
+

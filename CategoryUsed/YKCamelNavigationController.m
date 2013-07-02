@@ -8,6 +8,9 @@
 
 #import "YKCamelNavigationController.h"
 
+#import "YKCamelSearchViewController.h"
+
+#import "UIView+Method.h"
 @interface YKCamelNavigationController ()
 
 @end
@@ -23,6 +26,26 @@
     return self;
 }
 
+- (id)init{
+    self = [super init];
+    if (self) {
+        [[self navigationBar] setBackgroundImage:[UIImage imageNamed:@"common_bg_dingtiao.png"] forBarMetrics:UIBarMetricsDefault];
+
+    }
+    return self;
+}
+
+- (void)defaultBackButtonTap:(id)sender{
+    [self popViewControllerAnimated:YES];
+}
+-(void) onSearchButtonTap:(id) sender{
+    YKCamelSearchViewController *vc = [[YKCamelSearchViewController alloc] initWithNibName:@"YKCamelSearchViewController" bundle:nil];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.navigationItem.leftBarButtonItem = ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
+    [self pushViewController:vc
+                    animated:YES];
+    
+}
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController{
     self = [super initWithRootViewController:rootViewController];

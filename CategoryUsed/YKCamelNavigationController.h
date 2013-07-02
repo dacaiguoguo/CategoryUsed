@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YKCamelNavigationController : UINavigationController
+-(void) onSearchButtonTap:(id) sender;
+
 
 @end

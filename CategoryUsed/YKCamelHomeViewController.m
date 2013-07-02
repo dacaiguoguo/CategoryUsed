@@ -56,17 +56,12 @@
         // Custom initialization
         self.title = @"首页";
         self.tabBarItem.image = [UIImage imageNamed:[self navTabNormalImageNames][0]];
-        
-        {//navbar 左侧的logo
-            UIView* v=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 46)];
-            v.clipsToBounds=YES;
-            UIImageView* iv=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"shouye_img_logo.png"]];
-            [v addSubview:iv];
-            UIBarButtonItem* btnitem=[[UIBarButtonItem alloc] initWithCustomView:v];
-            self.navigationItem.leftBarButtonItem=btnitem;
+//        
+//        {//navbar 左侧的logo
+//            self.navigationItem.leftBarButtonItem=btnitem;
             self.navigationItem.title = nil;
-        }
-        self.navigationItem.rightBarButtonItem=[self createNavRightItemButtonWithNormalImageName:@"common_btn_sousuo_normal.png" selectedImageName:@"common_btn_sousuo_selected.png" target:self action:@selector(onSearchButtonTap:)];
+//        }
+//        self.navigationItem.rightBarButtonItem=[self createNavRightItemButtonWithNormalImageName:@"common_btn_sousuo_normal.png" selectedImageName:@"common_btn_sousuo_selected.png" target:self action:@selector(onSearchButtonTap:)];
     }
     return self;
 }

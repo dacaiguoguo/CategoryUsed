@@ -11,5 +11,6 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+#define CAMEL_HOST @"b2c.test.yekmob.com/api/index.php"
 
 #endif

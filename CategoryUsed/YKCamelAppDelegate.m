@@ -20,14 +20,11 @@
 
 #import "YKBaseModel.h"
 
+#import "UIView+Method.h"
 
-NS_INLINE UIViewController* ControllerUseClass(Class vClass){
-    
-    
-    UIViewController *ret = [[vClass alloc] initWithNibName:NSStringFromClass(vClass) bundle:nil];
-    return ret;
 
-}
+
+
 
 @implementation YKCamelAppDelegate
 
@@ -39,7 +36,16 @@ NS_INLINE UIViewController* ControllerUseClass(Class vClass){
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    self.iHomeNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelHomeViewController class])];
+    
+    
+    self.iHomeNav = [[YKCamelNavigationController alloc] init];
+
+    UIViewController *homeVC = ControllerUseClass([YKCamelHomeViewController class]);
+    homeVC.navigationItem.leftBarButtonItem = HomeControllerLeftBarCustomWithButton(@"shouye_img_logo.png");
+    homeVC.navigationItem.rightBarButtonItem = ControllerRightBarCustomWithButton(@"common_btn_sousuo", @selector(onSearchButtonTap:), self.iHomeNav);
+    
+    self.iHomeNav.viewControllers = @[homeVC];
+
 
     self.iBrandNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelBrandViewController class])];
 
@@ -151,6 +157,17 @@ NS_INLINE UIViewController* ControllerUseClass(Class vClass){
     self.camelBrandNetworkEngine = [[YKCamelBrandNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
     [self.camelBrandNetworkEngine useCache];
     
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+        self.camelHotSearchNetworkEngine = [[YKCamelHotSearchNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
+        [self.camelHotSearchNetworkEngine useCache];
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+        });
+    });
     
     
 }

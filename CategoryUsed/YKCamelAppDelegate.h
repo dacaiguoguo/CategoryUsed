@@ -14,13 +14,13 @@
 /*! 登陆／注册成功会发送此事件 notify.userinfo["user"] 是 YKUser */
 #define YK_NOTIFICATION_LOGIN @"YK_NOTIFICATION_LOGIN"
 #define YK_NOTIFICATION_LOGOUT @"YK_NOTIFICATION_LOGOUT"
-#define CAMEL_HOST @"b2c.test.yekmob.com/api/index.php"
 
 
 
 @class YKCamelHomeNetworkEngine;
 @class YKCamelBrandNetworkEngine;
 @class YKCamelHomeViewController;
+@class YKCamelHotSearchNetworkEngine;
 
 @interface YKCamelAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -40,6 +40,9 @@
 
 @property (strong, nonatomic) YKCamelNavigationController *iMoreNav;
 @property (strong, nonatomic) YKCamelHomeNetworkEngine *camelMoreNetworkEngine;
+
+@property (strong, nonatomic) YKCamelHotSearchNetworkEngine *camelHotSearchNetworkEngine;
+
 @property (strong, nonatomic) NSString *userToken;
 
 

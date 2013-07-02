@@ -28,6 +28,18 @@
 		594E708F178117DE00DFB972 /* YKCamelBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */; };
 		594E709417812C4500DFB972 /* YKCamelBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E709217812C4400DFB972 /* YKCamelBrandViewController.m */; };
 		594E709517812C4500DFB972 /* YKCamelBrandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */; };
+		594E709B17829C1900DFB972 /* YKCamelSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E709917829C1900DFB972 /* YKCamelSearchViewController.m */; };
+		594E709C17829C1900DFB972 /* YKCamelSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E709A17829C1900DFB972 /* YKCamelSearchViewController.xib */; };
+		594E70A117829C7300DFB972 /* YKSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E709E17829C7200DFB972 /* YKSegmentView.m */; };
+		594E70A517829C9700DFB972 /* YKCamelSearchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70A417829C9700DFB972 /* YKCamelSearchHistory.m */; };
+		594E70A817829CCB00DFB972 /* YKSegTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70A717829CCB00DFB972 /* YKSegTableView.m */; };
+		594E70AB1782ADEB00DFB972 /* UIView+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70AA1782ADEA00DFB972 /* UIView+Method.m */; };
+		594E70B31782BFD100DFB972 /* YKCamelProductListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70AD1782BFB700DFB972 /* YKCamelProductListView.m */; };
+		594E70B41782BFD100DFB972 /* YKCamelProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70AF1782BFBD00DFB972 /* YKCamelProductListViewController.m */; };
+		594E70B51782BFD100DFB972 /* YKCamelProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E70B01782BFC200DFB972 /* YKCamelProductListViewController.xib */; };
+		594E70B61782BFD100DFB972 /* YKSegmentViewProductList.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70B21782BFC600DFB972 /* YKSegmentViewProductList.m */; };
+		594E70BC1782C0DE00DFB972 /* YKCamelDragToLoadTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70BB1782C0DB00DFB972 /* YKCamelDragToLoadTableView.m */; };
+		594E70BF1782C14900DFB972 /* YKXIBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70BE1782C14600DFB972 /* YKXIBHelper.m */; };
 		59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */; };
 		59F722C6177D59E100C74300 /* YKCamelNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F722C5177D59E100C74300 /* YKCamelNoticeView.m */; };
 		59F7241E177D5E6F00C74300 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F722CB177D5E6E00C74300 /* Icon-72.png */; };
@@ -366,6 +378,28 @@
 		594E709117812C4400DFB972 /* YKCamelBrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelBrandViewController.h; sourceTree = "<group>"; };
 		594E709217812C4400DFB972 /* YKCamelBrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelBrandViewController.m; sourceTree = "<group>"; };
 		594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelBrandViewController.xib; sourceTree = "<group>"; };
+		594E709817829C1900DFB972 /* YKCamelSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelSearchViewController.h; sourceTree = "<group>"; };
+		594E709917829C1900DFB972 /* YKCamelSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelSearchViewController.m; sourceTree = "<group>"; };
+		594E709A17829C1900DFB972 /* YKCamelSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelSearchViewController.xib; sourceTree = "<group>"; };
+		594E709D17829C7200DFB972 /* YKSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSegmentView.h; sourceTree = "<group>"; };
+		594E709E17829C7200DFB972 /* YKSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSegmentView.m; sourceTree = "<group>"; };
+		594E70A317829C9700DFB972 /* YKCamelSearchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelSearchHistory.h; sourceTree = "<group>"; };
+		594E70A417829C9700DFB972 /* YKCamelSearchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelSearchHistory.m; sourceTree = "<group>"; };
+		594E70A617829CCA00DFB972 /* YKSegTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSegTableView.h; sourceTree = "<group>"; };
+		594E70A717829CCB00DFB972 /* YKSegTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSegTableView.m; sourceTree = "<group>"; };
+		594E70A91782ADE900DFB972 /* UIView+Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Method.h"; sourceTree = "<group>"; };
+		594E70AA1782ADEA00DFB972 /* UIView+Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Method.m"; sourceTree = "<group>"; };
+		594E70AC1782BFB500DFB972 /* YKCamelProductListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelProductListView.h; sourceTree = "<group>"; };
+		594E70AD1782BFB700DFB972 /* YKCamelProductListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelProductListView.m; sourceTree = "<group>"; };
+		594E70AE1782BFBB00DFB972 /* YKCamelProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelProductListViewController.h; sourceTree = "<group>"; };
+		594E70AF1782BFBD00DFB972 /* YKCamelProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelProductListViewController.m; sourceTree = "<group>"; };
+		594E70B01782BFC200DFB972 /* YKCamelProductListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelProductListViewController.xib; sourceTree = "<group>"; };
+		594E70B11782BFC400DFB972 /* YKSegmentViewProductList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKSegmentViewProductList.h; sourceTree = "<group>"; };
+		594E70B21782BFC600DFB972 /* YKSegmentViewProductList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKSegmentViewProductList.m; sourceTree = "<group>"; };
+		594E70BA1782C0D800DFB972 /* YKCamelDragToLoadTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelDragToLoadTableView.h; sourceTree = "<group>"; };
+		594E70BB1782C0DB00DFB972 /* YKCamelDragToLoadTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelDragToLoadTableView.m; sourceTree = "<group>"; };
+		594E70BD1782C14300DFB972 /* YKXIBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKXIBHelper.h; sourceTree = "<group>"; };
+		594E70BE1782C14600DFB972 /* YKXIBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKXIBHelper.m; sourceTree = "<group>"; };
 		59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNavigationController.h; sourceTree = "<group>"; };
 		59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelNavigationController.m; sourceTree = "<group>"; };
 		59F722C4177D59E100C74300 /* YKCamelNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNoticeView.h; sourceTree = "<group>"; };
@@ -741,21 +775,37 @@
 			children = (
 				5946B004177C10F50038EA33 /* YKCamelAppDelegate.h */,
 				5946B005177C10F50038EA33 /* YKCamelAppDelegate.m */,
+				594E70B71782BFE500DFB972 /* Home */,
+				594E70B81782C00100DFB972 /* Brand */,
+				594E70B91782C01100DFB972 /* Search */,
 				59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */,
 				59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */,
 				594E708B178117DE00DFB972 /* YKCamelBaseViewController.h */,
 				594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */,
 				594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */,
-				5946B00D177C10F50038EA33 /* YKCamelHomeViewController.h */,
-				5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */,
-				59181C02177C6E82004540E7 /* YKCamelHomeViewController.xib */,
-				594E709117812C4400DFB972 /* YKCamelBrandViewController.h */,
-				594E709217812C4400DFB972 /* YKCamelBrandViewController.m */,
-				594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */,
+				594E70AC1782BFB500DFB972 /* YKCamelProductListView.h */,
+				594E70AD1782BFB700DFB972 /* YKCamelProductListView.m */,
+				594E70AE1782BFBB00DFB972 /* YKCamelProductListViewController.h */,
+				594E70AF1782BFBD00DFB972 /* YKCamelProductListViewController.m */,
+				594E70B01782BFC200DFB972 /* YKCamelProductListViewController.xib */,
+				594E70B11782BFC400DFB972 /* YKSegmentViewProductList.h */,
+				594E70B21782BFC600DFB972 /* YKSegmentViewProductList.m */,
+				594E70A617829CCA00DFB972 /* YKSegTableView.h */,
+				594E70A717829CCB00DFB972 /* YKSegTableView.m */,
+				594E70A317829C9700DFB972 /* YKCamelSearchHistory.h */,
+				594E70A417829C9700DFB972 /* YKCamelSearchHistory.m */,
+				594E709D17829C7200DFB972 /* YKSegmentView.h */,
+				594E709E17829C7200DFB972 /* YKSegmentView.m */,
 				59F722C4177D59E100C74300 /* YKCamelNoticeView.h */,
 				59F722C5177D59E100C74300 /* YKCamelNoticeView.m */,
 				59181C1A177D56BF004540E7 /* YKLoopScrollView.h */,
 				59181C1B177D56BF004540E7 /* YKLoopScrollView.m */,
+				594E70A91782ADE900DFB972 /* UIView+Method.h */,
+				594E70AA1782ADEA00DFB972 /* UIView+Method.m */,
+				594E70BA1782C0D800DFB972 /* YKCamelDragToLoadTableView.h */,
+				594E70BB1782C0DB00DFB972 /* YKCamelDragToLoadTableView.m */,
+				594E70BD1782C14300DFB972 /* YKXIBHelper.h */,
+				594E70BE1782C14600DFB972 /* YKXIBHelper.m */,
 				59181C16177D367F004540E7 /* DataSource */,
 				59181C00177C5886004540E7 /* imageArray.plist */,
 				5946AFFC177C10F50038EA33 /* Supporting Files */,
@@ -776,6 +826,36 @@
 				5946B00B177C10F50038EA33 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		594E70B71782BFE500DFB972 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5946B00D177C10F50038EA33 /* YKCamelHomeViewController.h */,
+				5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */,
+				59181C02177C6E82004540E7 /* YKCamelHomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		594E70B81782C00100DFB972 /* Brand */ = {
+			isa = PBXGroup;
+			children = (
+				594E709117812C4400DFB972 /* YKCamelBrandViewController.h */,
+				594E709217812C4400DFB972 /* YKCamelBrandViewController.m */,
+				594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */,
+			);
+			name = Brand;
+			sourceTree = "<group>";
+		};
+		594E70B91782C01100DFB972 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				594E709817829C1900DFB972 /* YKCamelSearchViewController.h */,
+				594E709917829C1900DFB972 /* YKCamelSearchViewController.m */,
+				594E709A17829C1900DFB972 /* YKCamelSearchViewController.xib */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		59F722C7177D5E6E00C74300 /* imageResource */ = {
@@ -1753,6 +1833,8 @@
 				59F72546177D5E6F00C74300 /* iTunesArtwork in Resources */,
 				594E708F178117DE00DFB972 /* YKCamelBaseViewController.xib in Resources */,
 				594E709517812C4500DFB972 /* YKCamelBrandViewController.xib in Resources */,
+				594E709C17829C1900DFB972 /* YKCamelSearchViewController.xib in Resources */,
+				594E70B51782BFD100DFB972 /* YKCamelProductListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1806,6 +1888,16 @@
 				59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */,
 				594E708E178117DE00DFB972 /* YKCamelBaseViewController.m in Sources */,
 				594E709417812C4500DFB972 /* YKCamelBrandViewController.m in Sources */,
+				594E709B17829C1900DFB972 /* YKCamelSearchViewController.m in Sources */,
+				594E70A117829C7300DFB972 /* YKSegmentView.m in Sources */,
+				594E70A517829C9700DFB972 /* YKCamelSearchHistory.m in Sources */,
+				594E70A817829CCB00DFB972 /* YKSegTableView.m in Sources */,
+				594E70AB1782ADEB00DFB972 /* UIView+Method.m in Sources */,
+				594E70B31782BFD100DFB972 /* YKCamelProductListView.m in Sources */,
+				594E70B41782BFD100DFB972 /* YKCamelProductListViewController.m in Sources */,
+				594E70B61782BFD100DFB972 /* YKSegmentViewProductList.m in Sources */,
+				594E70BC1782C0DE00DFB972 /* YKCamelDragToLoadTableView.m in Sources */,
+				594E70BF1782C14900DFB972 /* YKXIBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
