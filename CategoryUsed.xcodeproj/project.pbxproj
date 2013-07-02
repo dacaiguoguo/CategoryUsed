@@ -26,6 +26,8 @@
 		5946B00F177C10F50038EA33 /* YKCamelHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */; };
 		594E708E178117DE00DFB972 /* YKCamelBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */; };
 		594E708F178117DE00DFB972 /* YKCamelBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */; };
+		594E709417812C4500DFB972 /* YKCamelBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E709217812C4400DFB972 /* YKCamelBrandViewController.m */; };
+		594E709517812C4500DFB972 /* YKCamelBrandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */; };
 		59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */; };
 		59F722C6177D59E100C74300 /* YKCamelNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F722C5177D59E100C74300 /* YKCamelNoticeView.m */; };
 		59F7241E177D5E6F00C74300 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F722CB177D5E6E00C74300 /* Icon-72.png */; };
@@ -361,6 +363,9 @@
 		594E708B178117DE00DFB972 /* YKCamelBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelBaseViewController.h; sourceTree = "<group>"; };
 		594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelBaseViewController.m; sourceTree = "<group>"; };
 		594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelBaseViewController.xib; sourceTree = "<group>"; };
+		594E709117812C4400DFB972 /* YKCamelBrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelBrandViewController.h; sourceTree = "<group>"; };
+		594E709217812C4400DFB972 /* YKCamelBrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelBrandViewController.m; sourceTree = "<group>"; };
+		594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelBrandViewController.xib; sourceTree = "<group>"; };
 		59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNavigationController.h; sourceTree = "<group>"; };
 		59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelNavigationController.m; sourceTree = "<group>"; };
 		59F722C4177D59E100C74300 /* YKCamelNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNoticeView.h; sourceTree = "<group>"; };
@@ -744,6 +749,9 @@
 				5946B00D177C10F50038EA33 /* YKCamelHomeViewController.h */,
 				5946B00E177C10F50038EA33 /* YKCamelHomeViewController.m */,
 				59181C02177C6E82004540E7 /* YKCamelHomeViewController.xib */,
+				594E709117812C4400DFB972 /* YKCamelBrandViewController.h */,
+				594E709217812C4400DFB972 /* YKCamelBrandViewController.m */,
+				594E709317812C4500DFB972 /* YKCamelBrandViewController.xib */,
 				59F722C4177D59E100C74300 /* YKCamelNoticeView.h */,
 				59F722C5177D59E100C74300 /* YKCamelNoticeView.m */,
 				59181C1A177D56BF004540E7 /* YKLoopScrollView.h */,
@@ -1744,6 +1752,7 @@
 				59F72545177D5E6F00C74300 /* yindao_4@2x.jpg in Resources */,
 				59F72546177D5E6F00C74300 /* iTunesArtwork in Resources */,
 				594E708F178117DE00DFB972 /* YKCamelBaseViewController.xib in Resources */,
+				594E709517812C4500DFB972 /* YKCamelBrandViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1796,6 +1805,7 @@
 				59F722C6177D59E100C74300 /* YKCamelNoticeView.m in Sources */,
 				59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */,
 				594E708E178117DE00DFB972 /* YKCamelBaseViewController.m in Sources */,
+				594E709417812C4500DFB972 /* YKCamelBrandViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

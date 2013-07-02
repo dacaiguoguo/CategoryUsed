@@ -10,29 +10,49 @@
 
 #import "YKCamelHomeViewController.h"
 
+#import "YKCamelBrandViewController.h"
+
+
 #import "YKCamelHomeNetworkEngine.h"
+
 
 #import "UIDevice.h"
 
 #import "YKBaseModel.h"
+
+
+NS_INLINE UIViewController* ControllerUseClass(Class vClass){
+    
+    
+    UIViewController *ret = [[vClass alloc] initWithNibName:NSStringFromClass(vClass) bundle:nil];
+    return ret;
+
+}
 
 @implementation YKCamelAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setUpEngines];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    [self setUpEngines];
-    self.viewController = [[YKCamelHomeViewController alloc] initWithNibName:@"YKCamelHomeViewController" bundle:nil];
-    self.iNav = [[YKCamelNavigationController alloc] initWithRootViewController:self.viewController];
+    self.iHomeNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelHomeViewController class])];
+
+    self.iBrandNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelBrandViewController class])];
+
+    self.iCategoryNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelHomeViewController class])];
+
+    self.iShopCartNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelHomeViewController class])];
+
+    self.iMoreNav = [[YKCamelNavigationController alloc] initWithRootViewController:ControllerUseClass([YKCamelHomeViewController class])];
+
     
-    
-    UIViewController *temp = [UIViewController new];
 
     self.iTab = [[UITabBarController alloc] init];
-    self.iTab.viewControllers = @[self.iNav,temp];
+    self.iTab.viewControllers = @[self.iHomeNav,self.iBrandNav,self.iCategoryNav,self.iShopCartNav,self.iMoreNav];
     self.window.rootViewController = self.iTab;
     [self.window makeKeyAndVisible];
     
@@ -127,9 +147,11 @@
     
     self.camelHomeNetworkEngine = [[YKCamelHomeNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
     [self.camelHomeNetworkEngine useCache];
-    [self.camelHomeNetworkEngine setReachabilityChangedHandler:^(NetworkStatus a) {
-        
-    }];
+    
+    self.camelBrandNetworkEngine = [[YKCamelBrandNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
+    [self.camelBrandNetworkEngine useCache];
+    
+    
     
 }
 

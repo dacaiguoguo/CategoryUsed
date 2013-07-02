@@ -18,3 +18,14 @@ typedef void (^CurrencyResponseBlock)(YKHome *home);
                            errorHandler:(MKNKErrorBlock) errorBlock;
 
 @end
+
+
+typedef void (^BrandResponseBlock)(YKBrandList *brandli);
+
+
+@interface YKCamelBrandNetworkEngine : MKNetworkEngine
+
+-(MKNetworkOperation*)completionHandler:(BrandResponseBlock) completionBlock
+                           errorHandler:(MKNKErrorBlock) errorBlock;
+
+@end

@@ -86,8 +86,8 @@ static const int maxRange=1000;    //
         //NSLog(@"contentScrollView=%@",contentScrollView);
     }else{
         //setContenOffset 后会引起page change
-        if([delegate respondsToSelector:@selector(scrollView:didSelectedPageIndex:)]){
-            [delegate scrollView:self didSelectedPageIndex:[self pageIndex]];
+        if([_delegate respondsToSelector:@selector(scrollView:didSelectedPageIndex:)]){
+            [_delegate scrollView:self didSelectedPageIndex:[self pageIndex]];
         }    
     }
     //NSLog(@" contentScrollView=%@",contentScrollView);
@@ -171,14 +171,14 @@ static const int maxRange=1000;    //
 
 
 -(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-    if([delegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]){
-        [delegate scrollViewWillBeginDecelerating:self];
+    if([_delegate respondsToSelector:@selector(scrollViewWillBeginDecelerating:)]){
+        [_delegate scrollViewWillBeginDecelerating:self];
     }
 }
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     //在当前位置左右都铺上subview
-    if([delegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]){
-        [delegate scrollViewDidEndDecelerating:self];
+    if([_delegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]){
+        [_delegate scrollViewDidEndDecelerating:self];
     }
     
 }

@@ -23,7 +23,6 @@
     NSMutableDictionary* addSubViewDictionary;        //本类自动添加的子试图,key为pageindex (NSNumber) value 为view
     int numOfPage;                          //总共有多少页
     CGSize sizeOfPage;                  
-    id<YKLoopScrollViewDelegate> delegate;
     int m_absolutePageIndex;        //当前第几页
     
     BOOL skipSetContentOffset;  //跳过处理setcontentOffset 事件

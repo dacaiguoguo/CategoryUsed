@@ -19,16 +19,27 @@
 
 
 @class YKCamelHomeNetworkEngine;
+@class YKCamelBrandNetworkEngine;
 @class YKCamelHomeViewController;
 
 @interface YKCamelAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) YKCamelNavigationController *iNav;
 @property (strong, nonatomic) UITabBarController *iTab;
-
-@property (strong, nonatomic) YKCamelHomeViewController *viewController;
+@property (strong, nonatomic) YKCamelNavigationController *iHomeNav;
 @property (strong, nonatomic) YKCamelHomeNetworkEngine *camelHomeNetworkEngine;
+
+@property (strong, nonatomic) YKCamelNavigationController *iBrandNav;
+@property (strong, nonatomic) YKCamelBrandNetworkEngine *camelBrandNetworkEngine;
+
+@property (strong, nonatomic) YKCamelNavigationController *iCategoryNav;
+@property (strong, nonatomic) YKCamelHomeNetworkEngine *camelCategoryNetworkEngine;
+
+@property (strong, nonatomic) YKCamelNavigationController *iShopCartNav;
+@property (strong, nonatomic) YKCamelHomeNetworkEngine *camelShopCartNetworkEngine;
+
+@property (strong, nonatomic) YKCamelNavigationController *iMoreNav;
+@property (strong, nonatomic) YKCamelHomeNetworkEngine *camelMoreNetworkEngine;
 @property (strong, nonatomic) NSString *userToken;
 
 
