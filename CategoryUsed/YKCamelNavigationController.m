@@ -37,11 +37,15 @@
     }
     return self;
 }
-
+- (void)goFilterWithFilterQ:(NSString *)fq{
+    
+}
 
 - (void)goProductListWithKeyword:(NSString *)kw{
     YKCamelProductListViewController *vcP = [[YKCamelProductListViewController alloc] initWithNibName:@"YKCamelProductListViewController" bundle:nil];
     vcP.keyword = kw;
+    vcP.navigationItem.leftBarButtonItem = ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
+    
     [self pushViewController:vcP animated:YES];
 }
 - (void)defaultBackButtonTap:(id)sender{

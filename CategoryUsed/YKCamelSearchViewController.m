@@ -13,7 +13,6 @@
 #import "YKCamelSearchHistory.h"
 #import "YKCamelProductListViewController.h"
 
-typedef void (^Block)();
 
 @interface YKCamelSearchViewController ()<YKSegTableViewDataSource,YKSegTableViewDelegate,UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) YKSegTableView *segmentTable ;

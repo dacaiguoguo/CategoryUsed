@@ -53,6 +53,9 @@ typedef void (^Block)();
 @property (nonatomic, copy) Block requestSuccess;
 //搜索失败后执行的Block
 @property (nonatomic, copy) Block requestFail;
+@property(nonatomic, retain) MKNetworkOperation* productListOperation;
+
+
 @end
 
 

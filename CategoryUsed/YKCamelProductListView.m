@@ -9,6 +9,7 @@
 #import "YKCamelProductListView.h"
 #import "YKCamelDragToLoadTableView.h"
 #import "YKXIBHelper.h"
+#import "UIImageView+WebCache.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface YKCamelProductListView()<YKCamelDragTableDelegate,YKCamelDragToLoadTableViewDelegate>
@@ -127,9 +128,7 @@
         int row = indexPath.row;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSURL *imageUrl = [NSURL URLWithString:[self.dataSource imageUrlForIndex:row*2]];
-#if SIXUP
         [cell.leftImageView setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"default_img_shangpinliebiaotu.png"]];
-#endif
         cell.leftNameLabel.text = [self.dataSource productNameForIndex:row*2];
         cell.leftSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2];
         cell.leftButton.tag = row*2;
@@ -147,9 +146,7 @@
             cell.rightNameLabel.text = [self.dataSource productNameForIndex:row*2+1];
             cell.rightSalePriceLabel.text = [self.dataSource salePriceForIndex:row*2+1];
             NSURL *imageUrl = [NSURL URLWithString:[self.dataSource imageUrlForIndex:row*2+1]];
-#if SIXUP
             [cell.rightImageView setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"default_img_shangpinliebiaotu.png"]];
-#endif
         }
         return cell;
         
@@ -166,9 +163,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         int row = indexPath.row;
         NSURL *imageUrl = [NSURL URLWithString:[self.dataSource imageUrlForIndex:row]];
-#if SIXUP
         [cell.pImageView setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"default_img_shangpinliebiaotu.png"]];
-#endif
         cell.nameLabel.text = [self.dataSource productNameForIndex:row];
         cell.shopPriceLabel.text = [self.dataSource salePriceForIndex:row];
         

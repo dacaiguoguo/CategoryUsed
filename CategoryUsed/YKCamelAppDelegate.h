@@ -21,6 +21,7 @@
 @class YKCamelBrandNetworkEngine;
 @class YKCamelHomeViewController;
 @class YKCamelHotSearchNetworkEngine;
+@class YKCamelProductListNetworkEngine;
 
 @interface YKCamelAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -42,6 +43,8 @@
 @property (strong, nonatomic) YKCamelHomeNetworkEngine *camelMoreNetworkEngine;
 
 @property (strong, nonatomic) YKCamelHotSearchNetworkEngine *camelHotSearchNetworkEngine;
+@property (strong, nonatomic) YKCamelProductListNetworkEngine *camelProductListNetworkEngine;
+
 
 @property (strong, nonatomic) NSString *userToken;
 

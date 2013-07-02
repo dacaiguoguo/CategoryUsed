@@ -163,6 +163,8 @@
         self.camelHotSearchNetworkEngine = [[YKCamelHotSearchNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
         [self.camelHotSearchNetworkEngine useCache];
         
+        self.camelProductListNetworkEngine = [[YKCamelProductListNetworkEngine alloc] initWithHostName:CAMEL_HOST customHeaderFields:[self commonHeaderFields]];
+        [self.camelProductListNetworkEngine useCache];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             

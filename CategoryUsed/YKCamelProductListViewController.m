@@ -127,15 +127,14 @@
     self.listView = [YKXIBHelper loadObjectFromXIBName:@"YKProductCell" type:[YKCamelProductListView class]];
     _listView.frame = CGRectMake(0, 44, 320, self.view.frame.size.height-44);
     _listView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:self.listView ];
     _listView.dataSource = self;
     _listView.delegate = self;
-    self.listView.backgroundColor=[UIColor clearColor];
+    self.listView.backgroundColor=[UIColor colorWithRed:0.546 green:0.432 blue:0.410 alpha:1.000];
     self.listView.autoresizingMask=UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_listView];
     
     //向segment的第一个按钮发事件。
-    [self.segUp.selectedButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+//    [self.segUp.selectedButton sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -220,6 +219,7 @@
     assert(obj);
     assert(_filterquery);
     self.filterquery = [NSMutableString string];
+    [((YKCamelNavigationController*)self.navigationController) goProductListWithKeyword:nil];
 //    [[[YKModuleManager shareInstance] shareNavModule] gotoControllerWithName:YK_MODULE_NAME_PRODUCT_LIST_FILTER params:@{@"filterList":obj,@"filterquery":_filterquery,@"filterqueryIndexPathArray":transNilObject(_filterqueryIndexPathArray, [NSMutableArray class])} fromController:self sender:nil];
 }
 - (void)changeViewType{
@@ -328,6 +328,12 @@
 #pragma mark -
 #pragma mark requestProductListInfo
 - (void)requestProductListInfoWithType:(int)typeQ{
+    self.productListOperation = [ApplicationDelegate.camelProductListNetworkEngine searchKeyword:@"1" completionHandler:^(YKProductList *keywordli) {
+        self.listData = keywordli;
+        [self.listView reloadData];
+    } errorHandler:^(NSError *error) {
+        
+    }];
 //    if (typeQ==KREQUESTTYPELOADDOWN) {
 //        if (totoalProductCount!=NSNotFound) {
 //            if (_pageIndex.intValue*_pageSize.intValue>totoalProductCount) {

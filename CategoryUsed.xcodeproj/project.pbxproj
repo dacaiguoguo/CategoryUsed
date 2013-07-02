@@ -43,6 +43,10 @@
 		594E70C21782C7A400DFB972 /* YKCamelSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70C11782C79E00DFB972 /* YKCamelSortButton.m */; };
 		594E70C41782C7F100DFB972 /* YKProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E70C31782C7ED00DFB972 /* YKProductCell.xib */; };
 		594E70C71782C84800DFB972 /* YKBorderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70C51782C84000DFB972 /* YKBorderImageView.m */; };
+		594E70CC1782D17300DFB972 /* YKCamelFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70CA1782D16D00DFB972 /* YKCamelFilterViewController.m */; };
+		594E70CD1782D17300DFB972 /* YKCamelFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594E70CB1782D17000DFB972 /* YKCamelFilterViewController.xib */; };
+		594E70D01782D1A200DFB972 /* YKFilterHeaderDetailListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70CF1782D19F00DFB972 /* YKFilterHeaderDetailListView.m */; };
+		594E70D31782D1D200DFB972 /* YKFilterCategoryClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 594E70D21782D1CF00DFB972 /* YKFilterCategoryClasses.m */; };
 		59DA9AC4177D902B008C0E11 /* YKCamelNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */; };
 		59F722C6177D59E100C74300 /* YKCamelNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F722C5177D59E100C74300 /* YKCamelNoticeView.m */; };
 		59F7241E177D5E6F00C74300 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 59F722CB177D5E6E00C74300 /* Icon-72.png */; };
@@ -408,6 +412,13 @@
 		594E70C31782C7ED00DFB972 /* YKProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKProductCell.xib; sourceTree = "<group>"; };
 		594E70C51782C84000DFB972 /* YKBorderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKBorderImageView.m; sourceTree = "<group>"; };
 		594E70C61782C84300DFB972 /* YKBorderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKBorderImageView.h; sourceTree = "<group>"; };
+		594E70C91782D16900DFB972 /* YKCamelFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelFilterViewController.h; sourceTree = "<group>"; };
+		594E70CA1782D16D00DFB972 /* YKCamelFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelFilterViewController.m; sourceTree = "<group>"; };
+		594E70CB1782D17000DFB972 /* YKCamelFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKCamelFilterViewController.xib; sourceTree = "<group>"; };
+		594E70CE1782D19C00DFB972 /* YKFilterHeaderDetailListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKFilterHeaderDetailListView.h; sourceTree = "<group>"; };
+		594E70CF1782D19F00DFB972 /* YKFilterHeaderDetailListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKFilterHeaderDetailListView.m; sourceTree = "<group>"; };
+		594E70D11782D1CB00DFB972 /* YKFilterCategoryClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKFilterCategoryClasses.h; sourceTree = "<group>"; };
+		594E70D21782D1CF00DFB972 /* YKFilterCategoryClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKFilterCategoryClasses.m; sourceTree = "<group>"; };
 		59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNavigationController.h; sourceTree = "<group>"; };
 		59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKCamelNavigationController.m; sourceTree = "<group>"; };
 		59F722C4177D59E100C74300 /* YKCamelNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKCamelNoticeView.h; sourceTree = "<group>"; };
@@ -786,16 +797,21 @@
 				594E70B71782BFE500DFB972 /* Home */,
 				594E70B81782C00100DFB972 /* Brand */,
 				594E70B91782C01100DFB972 /* Search */,
+				594E70C81782CCF900DFB972 /* ProductList */,
 				59DA9AC2177D902B008C0E11 /* YKCamelNavigationController.h */,
 				59DA9AC3177D902B008C0E11 /* YKCamelNavigationController.m */,
 				594E708B178117DE00DFB972 /* YKCamelBaseViewController.h */,
 				594E708C178117DE00DFB972 /* YKCamelBaseViewController.m */,
 				594E708D178117DE00DFB972 /* YKCamelBaseViewController.xib */,
+				594E70C91782D16900DFB972 /* YKCamelFilterViewController.h */,
+				594E70CA1782D16D00DFB972 /* YKCamelFilterViewController.m */,
+				594E70CB1782D17000DFB972 /* YKCamelFilterViewController.xib */,
+				594E70D11782D1CB00DFB972 /* YKFilterCategoryClasses.h */,
+				594E70D21782D1CF00DFB972 /* YKFilterCategoryClasses.m */,
+				594E70CE1782D19C00DFB972 /* YKFilterHeaderDetailListView.h */,
+				594E70CF1782D19F00DFB972 /* YKFilterHeaderDetailListView.m */,
 				594E70AC1782BFB500DFB972 /* YKCamelProductListView.h */,
 				594E70AD1782BFB700DFB972 /* YKCamelProductListView.m */,
-				594E70AE1782BFBB00DFB972 /* YKCamelProductListViewController.h */,
-				594E70AF1782BFBD00DFB972 /* YKCamelProductListViewController.m */,
-				594E70B01782BFC200DFB972 /* YKCamelProductListViewController.xib */,
 				594E70B11782BFC400DFB972 /* YKSegmentViewProductList.h */,
 				594E70B21782BFC600DFB972 /* YKSegmentViewProductList.m */,
 				594E70A617829CCA00DFB972 /* YKSegTableView.h */,
@@ -869,6 +885,16 @@
 				594E709A17829C1900DFB972 /* YKCamelSearchViewController.xib */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		594E70C81782CCF900DFB972 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				594E70AE1782BFBB00DFB972 /* YKCamelProductListViewController.h */,
+				594E70AF1782BFBD00DFB972 /* YKCamelProductListViewController.m */,
+				594E70B01782BFC200DFB972 /* YKCamelProductListViewController.xib */,
+			);
+			name = ProductList;
 			sourceTree = "<group>";
 		};
 		59F722C7177D5E6E00C74300 /* imageResource */ = {
@@ -1849,6 +1875,7 @@
 				594E709C17829C1900DFB972 /* YKCamelSearchViewController.xib in Resources */,
 				594E70B51782BFD100DFB972 /* YKCamelProductListViewController.xib in Resources */,
 				594E70C41782C7F100DFB972 /* YKProductCell.xib in Resources */,
+				594E70CD1782D17300DFB972 /* YKCamelFilterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1914,6 +1941,9 @@
 				594E70BF1782C14900DFB972 /* YKXIBHelper.m in Sources */,
 				594E70C21782C7A400DFB972 /* YKCamelSortButton.m in Sources */,
 				594E70C71782C84800DFB972 /* YKBorderImageView.m in Sources */,
+				594E70CC1782D17300DFB972 /* YKCamelFilterViewController.m in Sources */,
+				594E70D01782D1A200DFB972 /* YKFilterHeaderDetailListView.m in Sources */,
+				594E70D31782D1D200DFB972 /* YKFilterCategoryClasses.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

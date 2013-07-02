@@ -165,10 +165,24 @@
 -(MKNetworkOperation*)searchKeyword:(NSString *)kw completionHandler:(ProductListResponseBlock) completionBlock
                        errorHandler:(MKNKErrorBlock) errorBlock{
     
-    MKNetworkOperation *op = [self operationWithPath:@"hotSearch"
-                                              params:@{@"keyword": kw,
-                              @"pageIndex":@"1",
-                              @"pageSize":@"20"}
+    return [self searchtopicId:nil categoryId:nil brandId:nil keyword:kw filterQuery:nil sortBy:nil sortOrder:nil pageIndex:@"1" pageSize:@"20" completionHandler:completionBlock errorHandler:errorBlock];
+}
+
+-(MKNetworkOperation*)searchtopicId:(NSString *)topicId categoryId:(NSString *)categoryId brandId:(NSString *)brandId keyword:(NSString *)kw filterQuery:(NSString *)filterquery sortBy:(NSString *)sortBy sortOrder:(NSString *)sortOrder pageIndex:(NSString *)pageIndex pageSize:(NSString *)pageSize completionHandler:(ProductListResponseBlock) completionBlock
+                       errorHandler:(MKNKErrorBlock) errorBlock{
+    assert(pageIndex.length>0);
+    assert(pageSize.length>0);
+
+    MKNetworkOperation *op = [self operationWithPath:@"productList"
+                                              params:@{@"topicId":YKGDSStringOrEmpty(topicId),
+                              @"categoryId":YKGDSStringOrEmpty(categoryId),
+                              @"brandId":YKGDSStringOrEmpty(brandId),
+                              @"keyword": YKGDSStringOrEmpty(kw),
+                              @"filterquery":YKGDSStringOrEmpty(filterquery),
+                              @"sortBy":YKGDSStringOrEmpty(sortBy),
+                              @"sortOrder":YKGDSStringOrEmpty(sortOrder),
+                              @"pageIndex":pageIndex,
+                              @"pageSize":pageSize}
                                           httpMethod:@"POST"];
     
     
@@ -185,6 +199,8 @@
          }
          
          NSString* responseString=[completedOperation responseString];
+         DLog(@"Data frrrrr:\n%@",responseString);
+
          if([responseString length]<1){
              DLog(@"[ERROR] 服务端返回数据为空 %s ",__FUNCTION__);
              //             NSError* error=[NSError errorWithDomain:@"SEVER_ERROR" code:YKGDS_ERROR_CODE_INVALID_RESPONSE_EXCEPTION userInfo:nil];
@@ -209,8 +225,6 @@
     
     return op;
 }
-
-
 @end
 
 
