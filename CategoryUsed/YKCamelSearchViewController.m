@@ -11,8 +11,9 @@
 #import "YKSegmentView.h"
 #import "YKSegTableView.h"
 #import "YKCamelSearchHistory.h"
-typedef void (^Block)();
+#import "YKCamelProductListViewController.h"
 
+typedef void (^Block)();
 
 @interface YKCamelSearchViewController ()<YKSegTableViewDataSource,YKSegTableViewDelegate,UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) YKSegTableView *segmentTable ;
@@ -29,6 +30,7 @@ typedef void (^Block)();
 @end
 
 @implementation YKCamelSearchViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -186,39 +188,10 @@ typedef void (^Block)();
 
 
 - (void)goResultWithKeyWord:(NSString *)keyWord{
-    //这里进商品列表
-//    [[[YKModuleManager shareInstance] shareNavModule] gotoControllerWithName:YK_MODULE_NAME_PRODUCT_LIST params:nil fromController:self sender:nil];
-    Block success = ^(){
-        [YKCamelSearchHistory setHistoryKeyWord:keyWord];
-    };
-
-    Block fail = ^(){
-        [YKCamelSearchHistory deleteHisoryKeyWord:keyWord];
-
-    };
-
-    
     if (keyWord.length<1) {
-//        UIAlertView *alertview = [UIAlertView showAlertViewWithTitle:@"请输入关键词" message:nil cancelButtonTitle:@"OK" otherButtonTitles:nil onDismiss:^(int buttonIndex) {
-//            
-//        } onCancel:^{
-//            
-//        }];
-//        [alertview show];
         return;
     }
-//        [[[YKModuleManager shareInstance] shareNavModule] gotoControllerWithName:YK_MODULE_NAME_PRODUCT_LIST
-//                                                                          params:@{@"categoryId":@"",
-//         @"keyword":(keyWord.length>0?keyWord:@""),
-//         @"sortBy":@"",
-//         @"sortOrder":@"",
-//         @"pageIndex":@"1",
-//         @"pageSize":@"20",@"requestSuccess": success,@"requestFail":fail,@"title":[NSString stringWithFormat:@"搜索:%@",keyWord]}
-//                                                                  fromController:self sender:nil];
-//    YKCamelResultViewController *searchVc = [[YKCamelResultViewController alloc] init];
-//    searchVc.title = keyWord;
-//    [YKCamelSearchHistory setHistoryKeyWord:keyWord];
-//    [self.navigationController pushViewController:searchVc animated:YES];
+    [ApplicationDelegate.iHomeNav goProductListWithKeyword:keyWord];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

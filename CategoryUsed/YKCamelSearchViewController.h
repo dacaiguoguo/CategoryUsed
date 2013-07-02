@@ -12,6 +12,8 @@
  @declaration: YKCamelSearchViewController
  @description:  camel 的searchView
  */
+
 @interface YKCamelSearchViewController : YKCamelBaseViewController
 @property(nonatomic, retain) MKNetworkOperation* hotSearchOperation;
+
 @end

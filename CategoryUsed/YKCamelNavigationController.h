@@ -11,5 +11,5 @@
 @interface YKCamelNavigationController : UINavigationController
 -(void) onSearchButtonTap:(id) sender;
 
-
+- (void)goProductListWithKeyword:(NSString *)kw;
 @end

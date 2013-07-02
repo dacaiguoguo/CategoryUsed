@@ -10,6 +10,9 @@
 
 #import "YKCamelSearchViewController.h"
 
+#import "YKCamelProductListViewController.h"
+
+
 #import "UIView+Method.h"
 @interface YKCamelNavigationController ()
 
@@ -35,6 +38,12 @@
     return self;
 }
 
+
+- (void)goProductListWithKeyword:(NSString *)kw{
+    YKCamelProductListViewController *vcP = [[YKCamelProductListViewController alloc] initWithNibName:@"YKCamelProductListViewController" bundle:nil];
+    vcP.keyword = kw;
+    [self pushViewController:vcP animated:YES];
+}
 - (void)defaultBackButtonTap:(id)sender{
     [self popViewControllerAnimated:YES];
 }

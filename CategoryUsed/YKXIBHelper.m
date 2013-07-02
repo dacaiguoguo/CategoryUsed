@@ -16,7 +16,7 @@
 	return [self loadObjectFromXIBName:xibName type:type index:0];
 }
 +(id)loadObjectFromXIBName:(NSString*) xibName type:(Class) type index:(int) index {
-	////!! NSLog(@"+(id)loadObjectFromXIBName:(NSString*) xibName=%@ type:(Class) type=%@ index:(int) index=%d ",xibName,type,index);
+// NSLog(@"+(id)loadObjectFromXIBName:(NSString*) xibName=%@ type:(Class) type=%@ index:(int) index=%d ",xibName,type,index);
 	assert(xibName!=nil);
 	assert(type!=nil);
 	id ret=nil;
@@ -25,6 +25,7 @@
 	for(id obj in objectArray){
 		if([[obj class] isEqual:type]){
 			if(objectIndex==index){
+                ret = obj;
 				break;
 			}
 			++objectIndex;
