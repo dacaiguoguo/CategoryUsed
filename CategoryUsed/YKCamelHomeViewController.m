@@ -97,12 +97,12 @@
 }
 
 - (void)requestData{
-    
+    __weak YKCamelHomeViewController *weakSelf = self;
     self.homeOperation = [ApplicationDelegate.camelHomeNetworkEngine completionHandler:^(YKHome *home) {
-        self.home = home;
-        [self.webView loadHTMLString:home.htmlUrl baseURL:nil];
+        weakSelf.home = home;
+        [weakSelf.webView loadHTMLString:home.htmlUrl baseURL:nil];
         
-        if([self.home.noticeList count]>0){
+        if([weakSelf.home.noticeList count]>0){
 
             
 //TEST
@@ -111,28 +111,28 @@
                 notice.title = @"2222";
                 notice.noticeId = @"223";
                 notice.actionUrl = @"afsdf";
-                [self.home.noticeList addObject:notice];
+                [weakSelf.home.noticeList addObject:notice];
                 YKNotice *notice2 = [YKNotice new];
                 notice2.title = @"3333";
                 notice2.noticeId = @"33223";
                 notice2.actionUrl = @"afsdf";
-                [self.home.noticeList addObject:notice2];
+                [weakSelf.home.noticeList addObject:notice2];
 
             }
             
             
             //显示 noticeview
-            [self showNotice];
+            [weakSelf showNotice];
             
         }else{
             //隐藏 noticeview
-            [self hideNotice];
+            [weakSelf hideNotice];
         }
         
         //todo:计算高度
-        [self.tableView reloadData];
-        [self.topicScrollView reloadData];
-        self.topicPageControl.numberOfPages = self.home.topicList.count;
+        [weakSelf.tableView reloadData];
+        [weakSelf.topicScrollView reloadData];
+        weakSelf.topicPageControl.numberOfPages = self.home.topicList.count;
         
     } errorHandler:^(NSError *error) {
         

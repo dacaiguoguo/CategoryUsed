@@ -12,6 +12,8 @@
 
 #import "YKCamelProductListViewController.h"
 
+#import "YKCamelFilterViewController.h"
+
 
 #import "UIView+Method.h"
 @interface YKCamelNavigationController ()
@@ -37,8 +39,27 @@
     }
     return self;
 }
-- (void)goFilterWithFilterQ:(NSString *)fq{
+
+- (void)goFilterViewController:(id)sender{
+    YKCamelProductListViewController *portL = (YKCamelProductListViewController *) self.topViewController;
+    assert([portL isKindOfClass:[YKCamelProductListViewController class]]);
+    YKCamelFilterViewController *filter =(YKCamelFilterViewController*) ControllerUseClass([YKCamelFilterViewController class]);
+    filter.filterquery = portL.filterquery;
+    filter.filterqueryIndexPathArray = portL.filterqueryIndexPathArray;
+    filter.filterList = portL.filterOnlyFirst;
+    [self pushViewController:filter animated:YES];
+}
+- (void)goFilterWithFilterQ:(NSMutableString *)fq andFilterList:(YKFilterList *)flist filterqueryIndexPathArray:(NSMutableArray *)mutQ{
     
+    
+
+    
+    YKCamelFilterViewController *filter =(YKCamelFilterViewController*) ControllerUseClass([YKCamelFilterViewController class]);
+    filter.filterquery = fq;
+    filter.filterList = flist;
+    filter.filterqueryIndexPathArray = mutQ;
+    [self visibleViewController];
+    [self pushViewController:filter animated:YES];
 }
 
 - (void)goProductListWithKeyword:(NSString *)kw{
@@ -54,7 +75,8 @@
 -(void) onSearchButtonTap:(id) sender{
     YKCamelSearchViewController *vc = [[YKCamelSearchViewController alloc] initWithNibName:@"YKCamelSearchViewController" bundle:nil];
     vc.hidesBottomBarWhenPushed = YES;
-    vc.navigationItem.leftBarButtonItem = ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
+    [self performSelector:@selector(defaultBackButtonTap:) withObject:nil afterDelay:3];
+//    vc.navigationItem.leftBarButtonItem = ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
     [self pushViewController:vc
                     animated:YES];
     

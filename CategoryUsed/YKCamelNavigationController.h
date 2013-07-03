@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YKBaseModel.h"
 @interface YKCamelNavigationController : UINavigationController
 -(void) onSearchButtonTap:(id) sender;
 
 - (void)goProductListWithKeyword:(NSString *)kw;
+- (void)goFilterWithFilterQ:(NSMutableString *)fq andFilterList:(YKFilterList *)flist filterqueryIndexPathArray:(NSMutableArray *)mutQ;
+- (void)goFilterViewController:(id)sender;
 @end

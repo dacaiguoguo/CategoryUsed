@@ -35,21 +35,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"搜索";
+        DLog(@"alloc:%@",self);
+
     }
     return self;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [YKCamelSearchHistory setNumberOfHistory:20];
     self.segmentTable = [[YKSegTableView alloc] initWithFrame:CGRectMake(0, 44, 320, self.view.frame.size.height-44) andDataSource:self andDelegate:self];
     self.segmentTable.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.segmentTable.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.segmentTable];
-    
+    __weak YKCamelSearchViewController *weakSelf = self;
     self.hotSearchOperation = [ApplicationDelegate.camelHotSearchNetworkEngine completionHandler:^(YKKeywordList *keywordli) {
-        self.hotSearchList = keywordli;
-        [self.segmentTable reloadData];
+        weakSelf.hotSearchList = keywordli;
+        [weakSelf.segmentTable reloadData];
     } errorHandler:^(NSError *error) {
         
     }];
@@ -256,5 +259,8 @@
 
 }
 
+- (void)dealloc{
+    DLog(@"dealloc:%@",self);
+}
 
 @end

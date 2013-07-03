@@ -54,7 +54,7 @@ typedef void (^Block)();
 //搜索失败后执行的Block
 @property (nonatomic, copy) Block requestFail;
 @property(nonatomic, retain) MKNetworkOperation* productListOperation;
-
+@property (strong, nonatomic) YKFilterList *filterOnlyFirst;//只记录第一次的筛选条件。
 
 @end
 

@@ -47,8 +47,6 @@ typedef void (^ProductListResponseBlock)(YKProductList *keywordli);
 
 @interface YKCamelProductListNetworkEngine : MKNetworkEngine
 
--(MKNetworkOperation*)searchKeyword:(NSString *)kw completionHandler:(ProductListResponseBlock) completionBlock
-                 errorHandler:(MKNKErrorBlock) errorBlock;
 -(MKNetworkOperation*)searchtopicId:(NSString *)topicId categoryId:(NSString *)categoryId brandId:(NSString *)brandId keyword:(NSString *)kw filterQuery:(NSString *)filterquery sortBy:(NSString *)sortBy sortOrder:(NSString *)sortOrder pageIndex:(NSString *)pageIndex pageSize:(NSString *)pageSize completionHandler:(ProductListResponseBlock) completionBlock
                        errorHandler:(MKNKErrorBlock) errorBlock;
 

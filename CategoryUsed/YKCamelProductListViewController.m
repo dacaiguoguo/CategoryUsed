@@ -38,7 +38,7 @@
 @property (strong,nonatomic) YKProductList *listData;
 @property (strong, nonatomic) YKSegmentViewProductList *segUp;
 @property (strong, nonatomic) UIImageView *arrowImageView;
-@property (strong, nonatomic) YKFilterList *filterOnlyFirst;//只记录第一次的筛选条件。
+
 @end
 
 @implementation YKCamelProductListViewController
@@ -171,9 +171,7 @@
 
 #pragma mark -
 #pragma mark YKCamelProductListViewDelegate
-- (void)backtototo:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 - (void)productListView:(YKCamelProductListView *)productListView didSelectIndex:(int)_row{
     NSString *pId =( (YKProduct*)[self.listData objectAtIndex:_row]).productId;
 
@@ -219,8 +217,9 @@
     assert(obj);
     assert(_filterquery);
     self.filterquery = [NSMutableString string];
-    [((YKCamelNavigationController*)self.navigationController) goProductListWithKeyword:nil];
-//    [[[YKModuleManager shareInstance] shareNavModule] gotoControllerWithName:YK_MODULE_NAME_PRODUCT_LIST_FILTER params:@{@"filterList":obj,@"filterquery":_filterquery,@"filterqueryIndexPathArray":transNilObject(_filterqueryIndexPathArray, [NSMutableArray class])} fromController:self sender:nil];
+    [((YKCamelNavigationController*)self.navigationController) goFilterViewController:nil];
+
+//    [((YKCamelNavigationController*)self.navigationController) goFilterWithFilterQ:self.filterquery andFilterList:obj filterqueryIndexPathArray:self.filterqueryIndexPathArray];
 }
 - (void)changeViewType{
     YKCamelProductListView *blockView = self.listView;
@@ -328,9 +327,23 @@
 #pragma mark -
 #pragma mark requestProductListInfo
 - (void)requestProductListInfoWithType:(int)typeQ{
-    self.productListOperation = [ApplicationDelegate.camelProductListNetworkEngine searchKeyword:@"1" completionHandler:^(YKProductList *keywordli) {
+    
+    self.productListOperation = [ApplicationDelegate.camelProductListNetworkEngine searchtopicId:_topicId categoryId:_categoryId brandId:_brandId keyword:_keyword filterQuery:_filterquery sortBy:_sortBy sortOrder:_sortOrder pageIndex:_pageIndex pageSize:_pageSize completionHandler:^(YKProductList *keywordli) {
         self.listData = keywordli;
         [self.listView reloadData];
+        [self insertListDateAtZero];
+        
+        if (staicCount==0) {
+            YKFilterList *filterL = self.listData.filterList;
+            self.filterqueryIndexPathArray = [NSMutableArray array];
+            for (int i=0; i<[filterL count]; i++) {
+                [self.filterqueryIndexPathArray addObject:[NSIndexPath indexPathForRow:0 inSection:i]];
+            }
+            self.filterOnlyFirst = filterL;
+            
+        }
+        staicCount++;
+        
     } errorHandler:^(NSError *error) {
         
     }];
@@ -371,16 +384,6 @@
 //        if (typeQ==KREQUESTTYPEFIRST) {
 //            self.listData = productList;
 //            [self insertListDateAtZero];
-//            if (staicCount==0) {
-//                YKFilterList *filterL = self.listData.filterList;
-//                self.filterqueryIndexPathArray = [NSMutableArray array];
-//                for (int i=0; i<[filterL count]; i++) {
-//                    [self.filterqueryIndexPathArray addObject:[NSIndexPath indexPathForRow:0 inSection:i]];
-//                }
-//                self.filterOnlyFirst = filterL;
-//
-//            }
-//            staicCount++;
 //
 //            [self.listView finishedLoadingScrollTop];
 //        }
@@ -446,5 +449,10 @@
     }
 
 }
+
+- (void)dealloc{
+    DLog(@"%@",self);
+}
+
 
 @end

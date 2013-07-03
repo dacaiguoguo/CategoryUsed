@@ -128,13 +128,13 @@
 #ifdef DEBUG
     NSLog(@"dacaiguoguo:%@",self.filterquery);
 #endif
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [self createNavRightItemButtonWithNormalImageName:@"common_btn_tijiao_normal.png" selectedImageName:@"common_btn_tijiao_selected.png" target:self action:@selector(overFilter:)];
-
-
     
     self.headerList = [[YKFilterHeaderDetailListView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height) withDataSource:self withDelegate:self indxArray:_filterqueryIndexPathArray];
     _headerList.backgroundColor = [UIColor clearColor];
