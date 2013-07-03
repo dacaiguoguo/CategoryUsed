@@ -46,5 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)dealloc{
+    DLog(@"dealloc:%@",self);
+}
 @end

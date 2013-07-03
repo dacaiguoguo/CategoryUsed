@@ -22,23 +22,36 @@
 
 @implementation YKCamelNavigationController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (id)init{
     self = [super init];
     if (self) {
         [[self navigationBar] setBackgroundImage:[UIImage imageNamed:@"common_bg_dingtiao.png"] forBarMetrics:UIBarMetricsDefault];
-
     }
     return self;
 }
+- (id)initWithRootViewController:(UIViewController *)rootViewController{
+    self = [super initWithRootViewController:rootViewController];
+    if (self) {
+        [[self navigationBar] setBackgroundImage:[UIImage imageNamed:@"common_bg_dingtiao.png"] forBarMetrics:UIBarMetricsDefault];
+        
+        // Custom initialization
+    }
+    return self;
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 
 - (void)goFilterViewController:(id)sender{
     YKCamelProductListViewController *portL = (YKCamelProductListViewController *) self.topViewController;
@@ -47,18 +60,8 @@
     filter.filterquery = portL.filterquery;
     filter.filterqueryIndexPathArray = portL.filterqueryIndexPathArray;
     filter.filterList = portL.filterOnlyFirst;
-    [self pushViewController:filter animated:YES];
-}
-- (void)goFilterWithFilterQ:(NSMutableString *)fq andFilterList:(YKFilterList *)flist filterqueryIndexPathArray:(NSMutableArray *)mutQ{
-    
-    
-
-    
-    YKCamelFilterViewController *filter =(YKCamelFilterViewController*) ControllerUseClass([YKCamelFilterViewController class]);
-    filter.filterquery = fq;
-    filter.filterList = flist;
-    filter.filterqueryIndexPathArray = mutQ;
-    [self visibleViewController];
+    filter.navigationItem.leftBarButtonItem =
+    ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
     [self pushViewController:filter animated:YES];
 }
 
@@ -75,32 +78,11 @@
 -(void) onSearchButtonTap:(id) sender{
     YKCamelSearchViewController *vc = [[YKCamelSearchViewController alloc] initWithNibName:@"YKCamelSearchViewController" bundle:nil];
     vc.hidesBottomBarWhenPushed = YES;
-    [self performSelector:@selector(defaultBackButtonTap:) withObject:nil afterDelay:3];
-//    vc.navigationItem.leftBarButtonItem = ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
+    vc.navigationItem.leftBarButtonItem = ControllerLeftBarCustomWithButton(@"common_btn_fanhui", @selector(defaultBackButtonTap:), self);
     [self pushViewController:vc
                     animated:YES];
     
 }
 
-- (id)initWithRootViewController:(UIViewController *)rootViewController{
-    self = [super initWithRootViewController:rootViewController];
-    if (self) {
-        [[self navigationBar] setBackgroundImage:[UIImage imageNamed:@"common_bg_dingtiao.png"] forBarMetrics:UIBarMetricsDefault];
-
-        // Custom initialization
-    }
-    return self;
-}
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

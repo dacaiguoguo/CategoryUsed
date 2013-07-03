@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "YKBaseModel.h"
 @interface YKCamelNavigationController : UINavigationController
--(void) onSearchButtonTap:(id) sender;
 
+/**
+ *  首页的右边的search 按钮点击后，跳到搜索页面
+ */
+-(void) onSearchButtonTap:(id) sender;
+/**
+ *  搜索页面 进入商品列表页面
+ */
 - (void)goProductListWithKeyword:(NSString *)kw;
-- (void)goFilterWithFilterQ:(NSMutableString *)fq andFilterList:(YKFilterList *)flist filterqueryIndexPathArray:(NSMutableArray *)mutQ;
+/**
+ *  商品列表页面 进入到筛选页面
+ */
 - (void)goFilterViewController:(id)sender;
 @end

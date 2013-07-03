@@ -97,7 +97,6 @@
 {
     [super viewDidLoad];
 
-    
     //设置右边按钮
     self.navigationItem.rightBarButtonItem =[self createNavRightItemButtonWithNormalImageName:@"common_btn_gongge_normal.png" selectedImageName:@"common_btn_gongge_selected.png" rNormalImageName:@"common_btn_shaixuan_normal.png" rSelectedImageName:@"common_btn_shaixuan_selected.png" target:self action:@selector(changeViewType) raction:@selector(popFilter)];
     
@@ -122,7 +121,6 @@
     lineView.opaque = YES;
     [self.view addSubview:lineView];
     
-    
     //添加商品列表View;
     self.listView = [YKXIBHelper loadObjectFromXIBName:@"YKProductCell" type:[YKCamelProductListView class]];
     _listView.frame = CGRectMake(0, 44, 320, self.view.frame.size.height-44);
@@ -140,6 +138,7 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     _pageIndex = @"1";
+    return;
     [self requestProductListInfoWithType:KREQUESTTYPEFIRST];
 #ifdef DEBUG
     NSLog(@"s:%@",self.listData.filterList);
@@ -453,9 +452,8 @@
 
 }
 
+
 - (void)dealloc{
-    DLog(@"%@",self);
+    DLog(@"dealloc:%@",self);
 }
-
-
 @end

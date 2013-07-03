@@ -259,8 +259,5 @@
 
 }
 
-- (void)dealloc{
-    DLog(@"dealloc:%@",self);
-}
 
 @end

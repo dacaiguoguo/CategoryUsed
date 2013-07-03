@@ -17,7 +17,7 @@
     int selectedIndex;
     
 }
-@property (nonatomic, strong) id<YKSegmentViewProductListDelegate> delegate;
+@property (nonatomic, assign) id<YKSegmentViewProductListDelegate> delegate;
 @property (assign) int needIndex;
 - (void)addDoubleClick;
 -(void) setSelectIndex:(int) index;
