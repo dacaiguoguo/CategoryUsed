@@ -132,7 +132,7 @@
         //todo:计算高度
         [weakSelf.tableView reloadData];
         [weakSelf.topicScrollView reloadData];
-        weakSelf.topicPageControl.numberOfPages = self.home.topicList.count;
+        weakSelf.topicPageControl.numberOfPages = weakSelf.home.topicList.count;
         
     } errorHandler:^(NSError *error) {
         

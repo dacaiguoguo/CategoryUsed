@@ -328,18 +328,21 @@
 #pragma mark requestProductListInfo
 - (void)requestProductListInfoWithType:(int)typeQ{
     
+    
+    __weak YKCamelProductListViewController *weakSelf = self;
+
     self.productListOperation = [ApplicationDelegate.camelProductListNetworkEngine searchtopicId:_topicId categoryId:_categoryId brandId:_brandId keyword:_keyword filterQuery:_filterquery sortBy:_sortBy sortOrder:_sortOrder pageIndex:_pageIndex pageSize:_pageSize completionHandler:^(YKProductList *keywordli) {
-        self.listData = keywordli;
-        [self.listView reloadData];
-        [self insertListDateAtZero];
+        weakSelf.listData = keywordli;
+        [weakSelf.listView reloadData];
+        [weakSelf insertListDateAtZero];
         
         if (staicCount==0) {
-            YKFilterList *filterL = self.listData.filterList;
-            self.filterqueryIndexPathArray = [NSMutableArray array];
+            YKFilterList *filterL = weakSelf.listData.filterList;
+            weakSelf.filterqueryIndexPathArray = [NSMutableArray array];
             for (int i=0; i<[filterL count]; i++) {
-                [self.filterqueryIndexPathArray addObject:[NSIndexPath indexPathForRow:0 inSection:i]];
+                [weakSelf.filterqueryIndexPathArray addObject:[NSIndexPath indexPathForRow:0 inSection:i]];
             }
-            self.filterOnlyFirst = filterL;
+            weakSelf.filterOnlyFirst = filterL;
             
         }
         staicCount++;
